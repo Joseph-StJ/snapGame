@@ -17,7 +17,7 @@ public class Game{
 
 	public ArrayList<Player> snap(ArrayList<Player> players){
 		//I need to decide how to prform the snap math so that is
-		//random and works
+		//random and has something to de with how the nubers are assinged
 	}
 
 	public int howManyRemain(){
