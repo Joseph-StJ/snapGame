@@ -1,5 +1,7 @@
 package game;
 
+import java.util.Random;
+
 public class Game{
 	//attributes
 	public int timeTilSnap;
@@ -10,18 +12,49 @@ public class Game{
 		this.timeTilSnap = timeTilSnap;
 	}
 
+	//load users and their info from file
+	public Game(BufferedReader br)throws IOException{
+		timeTilSnap = Integer.parseInt(br.readLine());
+		while(br.ready()){
+			Player p = new Player(br);
+			players.add(p);
+		}
+	}
+
 	//methods
 	public void addPlayer(Player player){
 		players.add(player);
 	}
 
-	public ArrayList<Player> snap(ArrayList<Player> players){
-		//I need to decide how to prform the snap math so that is
-		//random and has something to de with how the nubers are assinged
+	public void snap(ArrayList<Player> players){
+		int s = players.howManyRemain();
+		int f = 0.5 * s;
+		int i = 0;
+		Random rand = new Random();
+
+		while(i < f){
+			int r = nextInt(f);
+			if(players[r].getStatus()){
+				players[r].die();
+				i++;
+			}
+		}
 	}
 
 	public int howManyRemain(){
-		return players.size();
+		int s = players.size();
+		int t = 0;
+		for(int i = 0; i < s; i++){
+			if(players[i].getStatus()){
+				t++;
+			}
+		}
+		return t;
+	}
+
+	//save user data
+	public void save(){
+
 	}
 
 	public String toString(){

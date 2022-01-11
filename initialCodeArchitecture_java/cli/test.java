@@ -2,7 +2,7 @@ public class test{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 
-		//print "landing menu"
+		//print "landing page" - landing page should have you sign in?
 
 		//new game sign up
 
