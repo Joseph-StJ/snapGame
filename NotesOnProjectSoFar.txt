@@ -1,0 +1,22 @@
+1/2/2022
+  The goals of this project:
+  
+    ~Long term:
+      -An app that someone could download from the app store
+      -Game is "sycronous" amoungst players of the game [they all recieve the "snap" notification at similar times]
+      -Program recognizes users and load thier game data
+      -Program keeps track on wins and losses for each user
+    
+    ~Short term:
+      -UMI of the code base
+      -A UI demo
+      -A 'funtional', locol-only, java-coded demo
+        +MainWin
+        +CLI*                                                               //temporary
+        +Game
+        +Player
+      
+      
+1/11/2022
+  I decided that for now when I'm storing a game that I will not encode the data.
+  It might be a good idea to look at in the future when we're moving the app online, for example.
